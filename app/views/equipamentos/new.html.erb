@@ -1,0 +1,71 @@
+<h1>New equipamento</h1>
+
+<% form_for(@equipamento) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :lancamento %><br />
+    <%= f.date_select :lancamento %>
+  </p>
+  <p>
+    <%= f.label :formato %><br />
+    <%= f.text_field :formato %>
+  </p>
+  <p>
+    <%= f.label :largura %><br />
+    <%= f.text_field :largura %>
+  </p>
+  <p>
+    <%= f.label :altura %><br />
+    <%= f.text_field :altura %>
+  </p>
+  <p>
+    <%= f.label :profundidade %><br />
+    <%= f.text_field :profundidade %>
+  </p>
+  <p>
+    <%= f.label :consumo %><br />
+    <%= f.text_field :consumo %>
+  </p>
+  <p>
+    <%= f.label :btu %><br />
+    <%= f.text_field :btu %>
+  </p>
+  <p>
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </p>
+  <p>
+    <%= f.label :ru %><br />
+    <%= f.text_field :ru %>
+  </p>
+  <p>
+    <%= f.label :oem_id %><br />
+    <%= f.text_field :oem_id %>
+  </p>
+  <p>
+    <%= f.label :oem %><br />
+    <%= f.check_box :oem %>
+  </p>
+  <p>
+    <%= f.label :segmento_id %><br />
+    <%= f.text_field :segmento_id %>
+  </p>
+  <p>
+    <%= f.label :familia_id %><br />
+    <%= f.text_field :familia_id %>
+  </p>
+  <p>
+    <%= f.label :fabricante_id %><br />
+    <%= f.text_field :fabricante_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', equipamentos_path %>

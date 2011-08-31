@@ -1,0 +1,28 @@
+<p>
+  <b>Item:</b>
+  <%=h @especificacao.item_id %>
+</p>
+
+<p>
+  <b>Equipamento:</b>
+  <%=h @especificacao.equipamento_id %>
+</p>
+
+<p>
+  <b>Quantidade:</b>
+  <%=h @especificacao.quantidade %>
+</p>
+
+<p>
+  <b>Atende:</b>
+  <%=h @especificacao.atende %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @especificacao.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_especificacao_path(@especificacao) %> |
+<%= link_to 'Back', especificacaos_path %>

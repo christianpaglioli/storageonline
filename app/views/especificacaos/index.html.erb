@@ -1,0 +1,28 @@
+<h1>Listing especificacaos</h1>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Equipamento</th>
+    <th>Quantidade</th>
+    <th>Atende</th>
+    <th>Descricao</th>
+  </tr>
+
+<% @especificacaos.each do |especificacao| %>
+  <tr>
+    <td><%=h especificacao.item_id %></td>
+    <td><%=h especificacao.equipamento_id %></td>
+    <td><%=h especificacao.quantidade %></td>
+    <td><%=h especificacao.atende %></td>
+    <td><%=h especificacao.descricao %></td>
+    <td><%= link_to 'Show', especificacao %></td>
+    <td><%= link_to 'Edit', edit_especificacao_path(especificacao) %></td>
+    <td><%= link_to 'Destroy', especificacao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New especificacao', new_especificacao_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Categoria:</b>
+  <%=h @item.categoria_id %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%=h @item.nome %>
+</p>
+
+<p>
+  <b>Metrica:</b>
+  <%=h @item.metrica %>
+</p>
+
+<p>
+  <b>Atendimento:</b>
+  <%=h @item.atendimento %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

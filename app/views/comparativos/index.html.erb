@@ -1,0 +1,24 @@
+<h1>Listing comparativos</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Descricao</th>
+    <th>User</th>
+  </tr>
+
+<% @comparativos.each do |comparativo| %>
+  <tr>
+    <td><%=h comparativo.data %></td>
+    <td><%=h comparativo.descricao %></td>
+    <td><%=h comparativo.user_id %></td>
+    <td><%= link_to 'Show', comparativo %></td>
+    <td><%= link_to 'Edit', edit_comparativo_path(comparativo) %></td>
+    <td><%= link_to 'Destroy', comparativo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New comparativo', new_comparativo_path %>

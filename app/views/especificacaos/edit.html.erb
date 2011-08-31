@@ -1,0 +1,32 @@
+<h1>Editing especificacao</h1>
+
+<% form_for(@especificacao) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :item_id %><br />
+    <%= f.text_field :item_id %>
+  </p>
+  <p>
+    <%= f.label :equipamento_id %><br />
+    <%= f.text_field :equipamento_id %>
+  </p>
+  <p>
+    <%= f.label :quantidade %><br />
+    <%= f.text_field :quantidade %>
+  </p>
+  <p>
+    <%= f.label :atende %><br />
+    <%= f.check_box :atende %>
+  </p>
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @especificacao %> |
+<%= link_to 'Back', especificacaos_path %>

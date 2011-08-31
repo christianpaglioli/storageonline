@@ -1,0 +1,22 @@
+<h1>Listing segmentos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descricao</th>
+  </tr>
+
+<% @segmentos.each do |segmento| %>
+  <tr>
+    <td><%=h segmento.nome %></td>
+    <td><%=h segmento.descricao %></td>
+    <td><%= link_to 'Show', segmento %></td>
+    <td><%= link_to 'Edit', edit_segmento_path(segmento) %></td>
+    <td><%= link_to 'Destroy', segmento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New segmento', new_segmento_path %>

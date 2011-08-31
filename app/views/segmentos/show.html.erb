@@ -1,0 +1,13 @@
+<p>
+  <b>Nome:</b>
+  <%=h @segmento.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @segmento.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_segmento_path(@segmento) %> |
+<%= link_to 'Back', segmentos_path %>

@@ -1,0 +1,23 @@
+<h1>Listing fabricantes</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Site</th>
+    <th>Descricao</th>
+  </tr>
+
+<% @fabricantes.each do |fabricante| %>
+  <tr>
+    <td><%=h fabricante.nome %></td>
+    <td><%=h fabricante.site %></td>
+    <td><%= link_to 'Show', fabricante %></td>
+    <td><%= link_to 'Edit', edit_fabricante_path(fabricante) %></td>
+    <td><%= link_to 'Destroy', fabricante, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New fabricante', new_fabricante_path %>

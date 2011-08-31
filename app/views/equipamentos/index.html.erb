@@ -1,0 +1,48 @@
+<h1>Listing equipamentos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Lancamento</th>
+    <th>Formato</th>
+    <th>Largura</th>
+    <th>Altura</th>
+    <th>Profundidade</th>
+    <th>Consumo</th>
+    <th>Btu</th>
+    <th>Peso</th>
+    <th>Ru</th>
+    <th>Oem</th>
+    <th>Oem</th>
+    <th>Segmento</th>
+    <th>Familia</th>
+    <th>Fabricante</th>
+  </tr>
+
+<% @equipamentos.each do |equipamento| %>
+  <tr>
+    <td><%=h equipamento.nome %></td>
+    <td><%=h equipamento.lancamento %></td>
+    <td><%=h equipamento.formato %></td>
+    <td><%=h equipamento.largura %></td>
+    <td><%=h equipamento.altura %></td>
+    <td><%=h equipamento.profundidade %></td>
+    <td><%=h equipamento.consumo %></td>
+    <td><%=h equipamento.btu %></td>
+    <td><%=h equipamento.peso %></td>
+    <td><%=h equipamento.ru %></td>
+    <td><%=h equipamento.oem_id %></td>
+    <td><%=h equipamento.oem %></td>
+    <td><%=h equipamento.segmento_id %></td>
+    <td><%=h equipamento.familia_id %></td>
+    <td><%=h equipamento.fabricante_id %></td>
+    <td><%= link_to 'Show', equipamento %></td>
+    <td><%= link_to 'Edit', edit_equipamento_path(equipamento) %></td>
+    <td><%= link_to 'Destroy', equipamento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New equipamento', new_equipamento_path %>
